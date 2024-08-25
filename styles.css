@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+    padding: 16px;
+}
+
+/* Estilos Globais */
+h2 {
+    font-weight: 600;
+    color: #01E4F6;
+}
+
+p {
+    font-weight: 200;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Estilos Globais para Links */
+a:hover {
+    color: #01E4F6;
+}
+
+/* Botões Globais */
+.btn-primary {
+    background-color: #00DC00;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #00C700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Navbar */
+header {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #1a202c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.15rem;
+}
+
+nav a {
+    font-weight: 600;
+    color: #ffffff; /* Branco como cor padrão */
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #01E4F6; /* Azul claro ao passar o mouse */
+}
+
+/* Seção Sobre a Mentora */
+.section-mentora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.section-mentora img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.section-mentora h2 {
+    font-size: 2rem;
+    color: #01E4F6;
+    margin-bottom: 1rem;
+}
+
+.section-mentora p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .section-mentora {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        justify-content: center;
+    }
+
+    .mentora-image {
+        display: flex;
+        justify-content: center; /* Centraliza a imagem dentro da sua área */
+        align-items: center;
+        flex: 0 0 400px; /* Define uma largura fixa para o lado da imagem */
+    }
+
+    .section-mentora img {
+        width: 400px;
+        height: 400px;
+        margin-bottom: 0;
+    }
+
+    .section-mentora h2 {
+        font-size: 2.5rem;
+    }
+
+    .section-mentora p {
+        font-size: 1.25rem;
+        max-width: 600px;
+    }
+}
+
+
+/* Responsividade e Espaçamento Global para Mobile */
+@media (max-width: 768px) {
+    body {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    p {
+        font-size: 1rem; /* Reduzindo levemente a fonte para dispositivos móveis */
+    }
+
+    .card {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #1a202c;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 16px;
+        padding: 16px;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: opacity 0.3s ease;
+    }
+
+    .card-content {
+        padding: 16px;
+        background: rgba(0, 0, 0, 0.85);
+        color: white;
+        border-radius: 8px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .card-content h3 {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+    }
+
+    .card-content a {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        background: #00DC00;
+        padding: 10px 20px;
+        border-radius: 50px;
+        display: inline-block;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .card-content a:hover {
+        background-color: #00C700;
+        transform: scale(1.1);
+    }
+}
