@@ -1,142 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michelli Dutra</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="styles.css" />
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-black text-white font-sans">
-    <!-- Navbar -->
-    <header class="text-center py-6 bg-gray-900 shadow-lg">
-        <h1 class="text-5xl font-bold text-white tracking-widest">Michelli Dutra</h1>
-        <nav class="mt-6">
-            <div class="inline-flex space-x-4">
-                <a href="index.html" class="hover:text-teal-400 transition duration-300 text-white">Home</a>
-                <a href="pages/mapa.html" class="hover:text-teal-400 transition duration-300 text-white">Mapa dos FIIs</a>
-                <a href="pages/ebook.html" class="hover:text-teal-400 transition duration-300 text-white">Ebook</a>
-                <a href="pages/curso-dzi.html" class="hover:text-teal-400 transition duration-300 text-white">Curso DZI</a>
-            </div>
-        </nav>
-    </header>
+<body class="bg-black text-white">
 
-    <!-- Seção de História Integrada -->
-    <section class="relative bg-black text-white py-16">
-        <div class="container mx-auto flex flex-col md:flex-row items-center">
-            <!-- Imagem com efeito de destaque ao passar o mouse -->
-            <div class="relative w-full md:w-1/3 mb-8 md:mb-0 image-hover-effect">
-                <img 
-                    src="assets/midutra_ny.png" 
-                    alt="Michelli Dutra" 
-                    class="w-full h-auto object-cover rounded-lg shadow-lg">
-                <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-70 rounded-lg"></div>
-            </div>
-            <!-- Texto com efeito parallax -->
-            <div class="md:w-2/3 md:pl-10">
-                <div class="parallax-text">
-                    <h2 class="text-4xl font-bold mb-10">Prazer, me chamo Michelli Dutra</h2>
-                    <p class="mb-10 text-lg">Também conhecida por Mi, minha jornada é muito mais do que uma caminhada entre números e resultados.</br> É uma história de transformação, onde cada escolha foi guiada pela fé e desejo de liberdade.</p>
-                    <h3 class="text-3xl font-bold mb-10">Minha Jornada de Transformação</h3>
-                    <p class="mb-10 text-lg">Formada em Ciências Contábeis, minha carreira como Auditora Contábil me mostrou que os números revelam histórias de sucesso para quem sabe interpretá-los. Transformar vidas é o que me move.</p>
-                    <p class="mb-10 text-lg">Acredito que o verdadeiro sucesso vai além do dinheiro; é sobre ter liberdade para viver uma vida com significado, onde o tempo é o nosso maior ativo. Minha missão é ajudar você a conquistar essa liberdade financeira, guiando cada passo com os mesmos princípios que me trouxeram até aqui.</p>
-                </div>
-            </div>
+<!-- Navbar -->
+<nav class="flex items-center justify-between p-4 bg-black fixed w-full top-0 z-10">
+    <div class="flex items-center">
+      <!-- Logo -->
+      <img src="assets/logo_dzi.png" alt="Logo DZI" class="w-10 h-10 mr-2">
+      <!-- Nome -->
+      <a href="/" class="text-2xl font-bold text-white hover:text-[#01e4f6]">Michelli Dutra</a>
+    </div>
+  </nav>
+
+<!-- Seção Criadora -->
+<section class="relative bg-black text-white py-16">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-12 items-center gap-6 px-6 md:px-10">
+        <!-- Imagem ao Lado com Destaque -->
+        <div class="relative md:col-span-6 col-span-12 rounded-lg overflow-hidden shadow-lg h-96 md:h-[500px]">
+            <!-- Imagem de Fundo -->
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/mi_foto.png');"></div>
+            <!-- Gradiente Sutil -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/25"></div>
         </div>
 
-        <!-- Divisor visual -->
-        <div class="container mx-auto text-center">
-            <div class="divider">
-                <div class="ripple-container">
-                    <div class="ripple-effect"></div>
-                </div>
-            </div>
+        <!-- Texto ao Lado Direito -->
+        <div class="md:col-span-6 col-span-12 text-justify">
+            <h2 class="text-4xl font-extrabold text-[#01e4f6] leading-tight mb-6">Prazer, sou Michelli Dutra</h2>
+            <p class="text-lg text-gray-300 mb-6">
+                Também conhecida como Mi, minha jornada vai além dos números e gráficos. É uma história de transformação, onde a fé e a busca pela liberdade guiaram cada decisão.
+            </p>
+            <p class="text-lg text-gray-300 mb-6">
+                De Auditoria Contábil ao mundo dos investimentos, cada passo foi uma oportunidade de ajudar pessoas a descobrirem o potencial de suas finanças.
+            </p>
+            <p class="text-lg text-gray-300 mb-6">
+                Minha missão é clara: empoderar você a conquistar liberdade financeira com estratégias inteligentes e práticas seguras.
+            </p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Seção de Produtos Interativa -->
-    <section id="products" class="py-2 bg-black text-white">
-        <div class="container mx-auto text-center">
-          <h2 class="text-4xl md:text-5xl font-bold text-teal-400 mb-12">Explore Meus Produtos</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="cards">
-            <!-- Card do Ebook -->
-            <div class="card bg-gray-800 p-6 rounded-lg hover:shadow-xl transition duration-300">
-              <img src="assets/ebook_photo2.png" alt="Ebook" class="rounded-t-lg w-full object-cover" />
-              <h3 class="text-2xl font-semibold mt-6">Ebook:</br>Investindo do Zero</h3>
-              <p class="mt-4 text-gray-400">Um guia completo para iniciantes que desejam transformar sua vida financeira. Aprenda a investir de forma inteligente e prática.</p>
-              <a href="pages/ebook.html" class="inline-block mt-6 px-6 py-3 bg-teal-400 text-white text-lg font-semibold rounded-full transition hover:bg-teal-300">Saiba Mais</a>
-            </div>
-            <!-- Card do Mapa dos FIIs -->
-            <div class="card bg-gray-800 p-6 rounded-lg hover:shadow-xl transition duration-300">
-              <img src="assets/mfiis_logo.png" alt="Mapa dos FIIs" class="rounded-t-lg w-full object-cover" />
-              <h3 class="text-2xl font-semibold mt-6">Mapa dos FIIs</br></br></h3>
-              <p class="mt-4 text-gray-400">Descubra os melhores Fundos Imobiliários com o Mapa dos FIIs. Uma ferramenta essencial para quem deseja diversificar com segurança.</p>
-              <a href="pages/mapa.html" class="inline-block mt-6 px-6 py-3 bg-teal-400 text-white text-lg font-semibold rounded-full transition hover:bg-teal-300">Saiba Mais</a>
-            </div>
-            <!-- Card do Curso DZI -->
-            <div class="card bg-gray-800 p-6 rounded-lg hover:shadow-xl transition duration-300">
-              <img src="assets/dzi_logo.png" alt="Curso DZI" class="rounded-t-lg w-full object-cover" />
-              <h3 class="text-2xl font-semibold mt-6">Curso DZI</br></br></h3>
-              <p class="mt-4 text-gray-400">Do Zero ao Investimento (DZI) é o curso definitivo para quem deseja iniciar no mundo dos investimentos com segurança e eficiência.</br></p>
-              <a href="pages/curso-dzi.html" class="inline-block mt-6 px-6 py-3 bg-teal-400 text-white text-lg font-semibold rounded-full transition hover:bg-teal-300">Saiba Mais</a>
-            </div>
+<!-- Produtos -->
+<section class="py-12 bg-gradient-to-b from-black via-[#1a1a1a] to-black text-white">
+    <div class="container mx-auto px-6">
+      <!-- Título -->
+      <h2 class="text-4xl font-bold text-center text-[#01e4f6] mb-16">Conheça os Produtos</h2>
+  
+      <!-- Grid de Produtos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Card 1: Ebook -->
+        <div class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl bg-[#101010] transform transition-all duration-500 hover:scale-105">
+          <div class="relative">
+            <img src="assets/ebook_photo2.png" alt="Ebook" class="w-full h-60 object-contain bg-[#1a1a1a]">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40 group-hover:opacity-50"></div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold text-[#01e4f6] mb-3">Livro Digital: Como Investir Começando do Zero</h3>
+            <p class="text-gray-300 mb-4">Um guia completo para iniciantes que desejam transformar sua vida financeira.</p>
+            <a href="https://pay.kiwify.com.br/5EgzoCm" 
+               class="inline-block bg-[#01e4f6] text-black font-semibold py-2 px-4 rounded-full shadow hover:bg-[#00c7e6] transition">
+              Saiba Mais
+            </a>
           </div>
         </div>
-      </section>
-      
-    <!-- Seção de Depoimentos -->
-    <section id="testimonials" class="py-8 bg-black text-white">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-teal-400 mb-12">Depoimentos</h2>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <blockquote>"A Michelli é muito didática. Sua abordagem é clara e prática. Aprendi a investir e já estou colhendo os frutos."</blockquote>
-                        <footer>- Ana Cristina Souza</footer>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <blockquote>"Comprei o ebook. Além do conteúdo tem os vídeos nele e finalmente entendi como fazer meus investimentos crescerem."</blockquote>
-                        <footer>- Luiz Otávio Pimentel</footer>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <blockquote>"O Mapa dos FIIs mudou minha forma de investir!"</blockquote>
-                        <footer>- Leandro Assunção</footer>
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
+  
+        <!-- Card 2: Mapa dos FIIs -->
+        <div class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl bg-[#101010] transform transition-all duration-500 hover:scale-105">
+          <div class="relative">
+            <img src="assets/mfiis_logo.png" alt="Mapa dos FIIs" class="w-full h-60 object-contain bg-[#1a1a1a]">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40 group-hover:opacity-50"></div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold text-[#01e4f6] mb-2">Mapa dos FIIs</h3>
+            <p class="text-gray-300 mt-10 mb-6">Descubra os melhores Fundos Imobiliários com a ferramenta ideal para investidores.</p>
+            <a href="https://pay.kiwify.com.br/3KTprIi" 
+               class="inline-block bg-[#01e4f6] text-black font-semibold py-2 px-4 rounded-full shadow hover:bg-[#00c7e6] transition">
+              Saiba Mais
+            </a>
+          </div>
         </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-10">
-        <div class="container mx-auto text-center flex flex-col items-center">
-            <div class="flex justify-center mb-6">
-                <a href="https://www.instagram.com/midutradutra/" target="_blank" class="mx-2">
-                    <img src="assets/instagram.png" alt="Instagram" class="w-8 h-8" />
-                </a>
-                <a href="https://www.tiktok.com/@michellidutra" target="_blank" class="mx-2">
-                    <img src="assets/tiktok.png" alt="TikTok" class="w-8 h-8" />
-                </a>
-                <a href="https://x.com/dutrami_em" target="_blank" class="mx-2">
-                    <img src="assets/twitter.png" alt="X" class="w-8 h-8" />
-                </a>
-                <a href="https://www.youtube.com/@Midutradutra" target="_blank" class="mx-2">
-                    <img src="assets/youtube.png" alt="YouTube" class="w-8 h-8" />
-                </a>
-            </div>
-            <p class="text-sm text-gray-400">© Michelli Dutra 2024 | Todos os direitos reservados</p>
+  
+        <!-- Card 3: Curso DZI -->
+        <div class="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl bg-[#101010] transform transition-all duration-500 hover:scale-105">
+          <div class="relative">
+            <img src="assets/logo_dzi.png" alt="Logo DZI" class="w-full h-60 object-contain bg-[#1a1a1a]">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40 group-hover:opacity-50"></div>
+          </div>
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold text-[#01e4f6] mb-2">Curso DZI</h3>
+            <p class="text-gray-300 mt-10 mb-6">Do Zero ao Investimento: O curso definitivo para quem quer começar a investir.</p>
+            <a href="pages/dzi.html" 
+               class="inline-block bg-[#01e4f6] text-black font-semibold py-2 px-4 rounded-full shadow hover:bg-[#00c7e6] transition">
+              Saiba Mais
+            </a>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+  
+ <!-- Depoimentos -->
+<section class="py-20 bg-gradient-to-b from-black via-[#1a1a1a] to-black text-white">
+    <div class="container mx-auto px-6">
+      <!-- Título -->
+      <h2 class="text-4xl font-bold text-center text-[#01e4f6] mb-12">Depoimentos</h2>
+  
+      <!-- Depoimentos (um acima do outro) -->
+      <div class="space-y-10">
+        <!-- Depoimento 1 -->
+        <div class="bg-[#101010] rounded-xl shadow-lg p-8 hover:shadow-2xl transition">
+          <p class="text-lg italic text-gray-300 mb-4">
+            "A Michelli é muito didática. Sua abordagem é clara e prática. Aprendi a investir e já estou colhendo os frutos."
+          </p>
+          <h4 class="text-xl font-bold text-[#01e4f6]">- Ana Cristina Souza</h4>
+        </div>
+  
+        <!-- Depoimento 2 -->
+        <div class="bg-[#101010] rounded-xl shadow-lg p-8 hover:shadow-2xl transition">
+          <p class="text-lg italic text-gray-300 mb-4">
+            "Comprei o livro digital. Além do conteúdo, ele possui vídeos que me ajudaram a entender como fazer meus investimentos crescerem."
+          </p>
+          <h4 class="text-xl font-bold text-[#01e4f6]">- Luiz Otávio Pimentel</h4>
+        </div>
+  
+        <!-- Depoimento 3 -->
+        <div class="bg-[#101010] rounded-xl shadow-lg p-8 hover:shadow-2xl transition">
+          <p class="text-lg italic text-gray-300 mb-4">
+            "O Mapa dos FIIs mudou completamente a forma como eu invisto. Recomendo a todos!"
+          </p>
+          <h4 class="text-xl font-bold text-[#01e4f6]">- Leandro Assunção</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Footer -->
+<footer class="bg-black py-10">
+    <div class="container mx-auto text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="https://www.instagram.com/midutradutra/" target="_blank" class="hover:opacity-75">
+                <img src="assets/instagram.png" alt="Instagram" class="w-8 h-8">
+            </a>
+            <a href="https://www.tiktok.com/@michellidutra" target="_blank" class="hover:opacity-75">
+                <img src="assets/tiktok.png" alt="TikTok" class="w-8 h-8">
+            </a>
+            <a href="https://x.com/dutrami_em" target="_blank" class="hover:opacity-75">
+                <img src="assets/twitter.png" alt="Twitter" class="w-8 h-8">
+            </a>
+            <a href="https://www.youtube.com/@Midutradutra" target="_blank" class="hover:opacity-75">
+                <img src="assets/youtube.png" alt="YouTube" class="w-8 h-8">
+            </a>
+        </div>
+        <p class="text-sm text-gray-400">© Michelli Dutra | Todos os direitos reservados</p>
+    </div>
+</footer>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: { el: '.swiper-pagination', clickable: true },
+    });
+</script>
 </body>
 </html>

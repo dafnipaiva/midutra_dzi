@@ -1,0 +1,462 @@
+/* Fonte Geral */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 1100; /* Garante que o navbar sempre esteja no topo */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #01e4f6;
+}
+
+/* Nova cor para os botões */
+.btn-primary {
+  background-color: #00d9ff;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #00c1e6;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+button:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 4px 6px rgba(0, 0, 0, 0.22);
+}
+
+.btn-left {
+  margin-left: 0; /* Alinhamento à esquerda */
+  text-align: center; /* Alinha o texto dentro do botão */
+  z-index: 1; /* Garante que o botão fique atrás do navbar */
+  position: relative; /* Garante que o z-index seja aplicado */
+}
+
+.btn-center {
+  margin: 0 auto; /* Centraliza o botão horizontalmente */
+  display: block; /* Garante que o botão respeite o alinhamento */
+  text-align: center; /* Alinha o texto dentro do botão */
+}
+
+/* Estilos para o botão CTA (GARANTIR MINHA VAGA) */
+.cta-button {
+  background-color: #01e4f6;
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease;
+  z-index: 10;
+  position: relative;
+
+}
+
+.cta-button:hover {
+  background-color: #00c7e6;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Fundo decorativo */
+.absolute.inset-0 {
+  z-index: 10;
+}
+
+/* Botão */
+.cta-button {
+  z-index: 10; /* Coloca acima do fundo decorativo */
+  position: relative; /* Garante que o z-index seja aplicado */
+}
+
+
+/* Carrossel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  will-change: transform;
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
+  margin: 0;
+}
+
+/* Section 3: Resultados */
+#resultados {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem; /* Ajustado para garantir padding consistente */
+  position: relative;
+  z-index: 0; /* Resolve sobreposição com o navbar */
+}
+
+#resultados h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #01e4f6;
+  text-align: center;
+}
+
+#resultados .grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+#resultados .group {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#resultados .group:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade para Section 3 */
+@media (min-width: 768px) {
+  #resultados .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #resultados .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Section 4: Investimentos */
+#investimentos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem; /* Ajustado para ser igual ao Section 3 */
+  position: relative;
+  z-index: 0;
+}
+
+#investimentos h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #01e4f6;
+  text-align: center;
+}
+
+#investimentos .grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+#investimentos .p-6 {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#investimentos .p-6:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade para Section 4 */
+@media (min-width: 768px) {
+  #investimentos .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #investimentos .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+/* Section 5: Estrutura do Curso */
+/* Estilos para o modal */
+#modal {
+  backdrop-filter: blur(5px);
+  z-index: 50;
+}
+
+#modal-content {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+#modal button {
+  background-color: black;
+  border: none;
+  cursor: pointer;
+}
+
+/* Ajuste para os módulos */
+/* Section 5: Estrutura do Curso */
+#estrutura-curso {
+  padding: 4rem 1.5rem;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#estrutura-curso h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #01e4f6;
+}
+
+#estrutura-curso .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Padrão para telas menores */
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  #estrutura-curso .grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas maiores */
+  }
+}
+
+/* Ajustes globais para imagens dentro dos módulos */
+#estrutura-curso img {
+  width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: cover; /* Garante que a imagem cubra completamente o espaço disponível */
+  border-radius: 12px; /* Bordas arredondadas */
+  transition: transform 0.3s ease; /* Transição suave */
+}
+
+#estrutura-curso img:hover {
+  transform: scale(1.05); /* Zoom suave no hover */
+}
+
+/* Ajustes para os botões dentro dos módulos */
+#estrutura-curso button {
+  background-color: #00d9ff;
+  color: black;
+  border-radius: 20px; /* Bordas arredondadas para um design moderno */
+  font-weight: bold;
+  padding: 0.5rem 1rem; /* Ajusta o espaçamento interno */
+  width: 80%; /* Ocupa 80% da largura do contêiner */
+  max-width: 200px; /* Limita o tamanho máximo */
+  margin: 1rem auto; /* Centraliza o botão */
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#estrutura-curso button:hover {
+  background-color: #00c1e6;
+  transform: translateY(-3px); /* Leve elevação no hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+}
+
+/* Responsividade para grid de módulos */
+#estrutura-curso .grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 1 coluna por padrão */
+  gap: 1.5rem; /* Espaçamento entre os itens */
+}
+
+@media (min-width: 768px) {
+  #estrutura-curso .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
+  }
+}
+
+@media (min-width: 1024px) {
+  #estrutura-curso .grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas grandes */
+  }
+}
+
+/* Ajuste responsivo para os botões */
+@media (max-width: 768px) {
+  #estrutura-curso button {
+    width: 90%; /* Ocupa quase toda a largura do contêiner em telas pequenas */
+    font-size: 1rem; /* Reduz o tamanho da fonte */
+  }
+}
+/* Oculta a imagem de fundo e exibe a imagem responsiva no modo mobile */
+/* Configuração padrão: exibe o banner.png como background */
+#header {
+  background-image: url('../assets/banner.png'); /* Imagem de fundo */
+  background-size: cover;
+  background-position: top; /* Posiciona no topo */
+  min-height: 100vh; /* Garante que o background ocupe toda a tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Coloca o texto na parte inferior */
+  padding-top: 6rem; /* Adiciona espaço para evitar sobreposição */
+  padding-bottom: 2rem; /* Espaço inferior */
+  background-position: center top 30%;
+  min-height: calc(50vh);
+}
+
+
+.responsive-banner {
+  display: none; /* Oculta por padrão */
+}
+/* Alteração para o modo responsivo */
+@media (max-width: 768px) {
+  #header {
+    background-image: none; /* Remove o background padrão */
+    padding-top: 4rem; /* Adiciona mais espaço no topo para telas menores */
+  }
+
+  .responsive-banner {
+    display: block; /* Exibe a imagem responsiva */
+    width: 100%; /* Garante que a imagem ocupe toda a largura */
+  }
+}
+.p-6 {
+  margin-left: 0; /* Remove qualquer margem extra à esquerda */
+  text-align: left; /* Garante que o texto fique alinhado à esquerda */
+  max-width: 70%; /* Limita a largura para que o texto fique concentrado na esquerda */
+}
+
+@media (max-width: 768px) {
+  .p-6 {
+    max-width: 90%; /* Ajusta para telas menores */
+    margin-left: 0; /* Mantém alinhamento à esquerda */
+  }
+}
+
+/* Section 6 */
+#mais-informacoes {
+  position: relative;
+  z-index: 1; /* Define um z-index menor que o navbar */
+}
+
+/* Section 6: Mais Informações */
+#mais-informacoes h3 {
+  text-align: center; /* Centraliza o texto */
+}
+
+#mais-informacoes .relative {
+  z-index: 5; /* Garantia que o conteúdo esteja acima do fundo decorativo */
+}
+
+#mais-informacoes .absolute {
+  z-index: 0; /* Fundo decorativo sempre abaixo do conteúdo */
+}
+
+/* Section 6: Mais Informações */
+#mais-informacoes .p-6 {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 100%;
+  min-height: 400px; /* Define uma altura mínima consistente */
+}
+
+#mais-informacoes .p-6:hover {
+  transform: scale(1.05);
+}
+
+#mais-informacoes .p-6 h3 {
+  font-size: 1.25rem;
+  color: #c7fe24;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+#mais-informacoes .p-6 h4 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #01e4f6;
+  margin-bottom: 3em;
+}
+
+#mais-informacoes .p-6 p {
+  font-size: 1rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+
+/* Section Criadora */
+#criadora {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background: linear-gradient(to bottom, #000, #1a1a1a, #000);
+}
+
+#criadora h2 {
+  font-size: 2.5rem; /* Tamanho do título */
+  line-height: 1.4;
+  color: white;
+  font-weight: 700;
+}
+
+#criadora span {
+  color: #01e4f6; /* Cor de destaque */
+}
+
+#criadora p {
+  color: #d1d5db; /* Cinza claro */
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem; /* Tamanho confortável para leitura */
+  line-height: 1.8;
+  text-align: justify;
+}
+
+#criadora img {
+  border-radius: 9999px; /* Circular */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Sombra mais proeminente */
+  max-width: 100%;
+  height: auto;
+  border: 4px solid #01e4f6; /* Borda com destaque */
+}
